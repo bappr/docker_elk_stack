@@ -13,7 +13,7 @@ services:
       - logging
   # index, search & agregation
   elasticsearch:
-    image: elasticsearch:5.1.2
+    image: elasticsearch:2.4
     container_name: elastic
     environment:
       - ES_JAVA_OPTS=-Xms1g -Xmx1g
@@ -27,7 +27,7 @@ services:
       - logging
   # UI
   kibana:
-    image: kibana:5.1.2
+    image: kibana:4.6
     container_name: kibana
     ports:
       - 5601:5601
